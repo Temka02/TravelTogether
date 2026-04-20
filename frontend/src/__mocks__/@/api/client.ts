@@ -1,0 +1,27 @@
+import { vi } from "vitest";
+
+export const apiClient = {
+  login: vi.fn(),
+  register: vi.fn(),
+  logout: vi.fn(),
+  getMe: vi.fn(),
+  updateProfile: vi.fn(),
+  getAvatar: vi.fn(),
+  uploadAvatar: vi.fn(),
+  getTrips: vi.fn(),
+  getTripById: vi.fn(),
+  createTrip: vi.fn(),
+  updateTrip: vi.fn(),
+  deleteTrip: vi.fn(),
+  getTripParticipants: vi.fn(),
+  getTripApplications: vi.fn(),
+  createApplication: vi.fn(),
+  acceptApplication: vi.fn(),
+  rejectApplication: vi.fn(),
+  getMyApplications: vi.fn(),
+  getApplicationsToMyTrips: vi.fn(),
+  checkApplication: vi.fn(),
+  deleteApplication: vi.fn(),
+  getWeather: vi.fn(),
+  isAuthenticated: vi.fn(() => false),
+};
