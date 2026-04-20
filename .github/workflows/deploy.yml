@@ -64,8 +64,8 @@ jobs:
           context: ./backend
           push: true
           tags: |
-            ghcr.io/${{ format('{0}', github.repository_owner) | lower }}/travel-backend:latest
-            ghcr.io/${{ format('{0}', github.repository_owner) | lower }}/travel-backend:${{ github.sha }}
+            ghcr.io/${{ github.repository_owner | lower }}/travel-backend:latest
+            ghcr.io/${{ github.repository_owner | lower }}/travel-backend:${{ github.sha }}
 
       - name: Build and push frontend image
         uses: docker/build-push-action@v5
@@ -73,8 +73,8 @@ jobs:
           context: ./frontend
           push: true
           tags: |
-            ghcr.io/${{ format('{0}', github.repository_owner) | lower }}/travel-frontend:latest
-            ghcr.io/${{ format('{0}', github.repository_owner) | lower }}/travel-frontend:${{ github.sha }}
+            ghcr.io/${{ github.repository_owner | lower }}/travel-frontend:latest
+            ghcr.io/${{ github.repository_owner | lower }}/travel-frontend:${{ github.sha }}
 
       - name: Deploy (заглушка)
         run: echo "Deployment step would go here"
